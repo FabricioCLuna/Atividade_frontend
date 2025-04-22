@@ -24,16 +24,11 @@ class WebTablesPage {
   }
 
   deletarRegistroPorEmail(email) {
-    // Espera até que o e-mail apareça na tabela
-    cy.get('#delete-record-4> svg > path').should('contain', email);
-  
-    // Quando encontrar, deleta
     cy.contains('div.rt-tr-group', email)
       .find('[title="Delete"]')
+      .should('be.visible')
       .click();
-  }
-  
-  
+  }   
 
   validarRegistroDeletado() {
     cy.get('.rt-tbody').should('not.contain', 'João Editado');

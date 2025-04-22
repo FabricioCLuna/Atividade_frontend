@@ -6,7 +6,7 @@ describe('Web Tables - CRUD Testes', () => {
   });
 
   it('Deve criar, editar e deletar um registro', () => {
-    const email = 'joao.silva@example.com';
+    const email = 'fabricio.luna@example.com';
   
     webTablesPage.criarRegistro();
     webTablesPage.editarRegistro();
